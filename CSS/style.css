@@ -1,0 +1,65 @@
+.control {
+    height: 86vh;
+}
+
+.control-main {
+    box-shadow: 8px 0 10px -6px rgba(0, 0, 0, 0.05);
+    height: 85vh;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.row .options .option {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.row .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.option:is(:hover, .active) i {
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.option :where(label, span) {
+    color: #5A6168;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.option:is(:hover, .active) :where(label, span) {
+    color: #4A98F7;
+}
+
+.option #fill {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+}
+
+#fill:checked~label {
+    color: #4A98F7;
+}
+
+.colors .option {
+    color: #4A98F7;
+}
+
+.drawing-board {
+    flex: 1;
+    overflow: hidden;
+}
+
+.drawing-board canvas {
+    width: 100%;
+    height: 100%;
+}
